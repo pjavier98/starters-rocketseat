@@ -1,0 +1,41 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Exercicio 1</title>
+  </head>
+  <body>
+    <div id="app"></div>
+
+    <script>
+      function createBox() {
+        var box = document.createElement('div');
+        box.setAttribute('class', 'box');
+        box.style.width = 100;
+        box.style.height = 100;
+        box.style.backgroundColor = '#f00';
+        box.style.backgroundPosition;
+
+        return box;
+      }
+
+      function addElement(divElement) {
+        divElement.appendChild(createBox());
+      }
+
+      var button = document.createElement('button');
+      var lbl = document.createTextNode('CLICK ME TO CREATE A NEW BUTTON');
+      button.setAttribute('class', 'botao');
+      button.appendChild(lbl);
+
+      var divElement = document.querySelector('#app');
+      divElement.appendChild(button);
+
+      var buttonDiv = document.querySelector('button.botao');
+      console.log(buttonDiv);
+
+      buttonDiv.onclick = function() {
+        addElement(divElement);
+      };
+    </script>
+  </body>
+</html>
